@@ -8,16 +8,21 @@ The project was developed using [Laravel](https://laravel.com/), so it has to be
 * PDO PHP Extension
 * Mbstring PHP Extension
 
-There must be a database system as well. So the vouchers can be stored somewhere, right?
+There must be a database system as well. So the products can be stored somewhere, right?
 
 Clone or download the project and enter in the folder created:
 ```
 cd /path-to/wherever-the/code-is
 ```  
 
-There is a `.env.example` file, change it's name to `.env`, this is a standard behaviour from Laravel environment.
+There is a `.env.example` file, change it's name to `.env`, this is a standard behaviour from Laravel environment, and create the database that you put in this config file, OK?
 ```
 mv .env.example .env
+```  
+
+Now we create a encryption key to the application
+```
+php artisan key:generate
 ```  
 
 Clone or download the project and run the composer installer:
@@ -35,9 +40,7 @@ Now, if you want to know if it is all working, you can run the tests:
 vendor/bin/phpunit
 ```  
 
-This is a API, so to better test it, there is a [Postman](https://www.getpostman.com/) collection [here](https://www.getpostman.com/collections/adb0d24343835147cebd) to use the endpoints. 
-The collection is based to use the address http:://localhost:8000.
-If a different address or port is used, the address must be changed at Postman as well.
+Now just start the server and you can access it at your [Localhost](http://localhost:8000). Do your registration an start to create and edit the products. 
 ```
 php artisan serve
 ```    
